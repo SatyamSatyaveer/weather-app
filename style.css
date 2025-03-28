@@ -1,0 +1,152 @@
+*{
+    margin: 0%;
+    padding:0%;
+}
+body{
+    background-color:rgb(0, 170, 255);
+    
+   
+}
+input::placeholder {
+    color:white;
+    font-size: 1.5rem;
+  
+    opacity: 1;
+  }
+
+.container{
+    width:100%;
+    height:100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+    
+
+}
+.tablet{position: relative;}
+.tabletimg{
+  Width:800px;
+}
+.weather_container{
+    position: absolute;
+    top: 50%;  /* Centers vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ensures proper centering */
+    width: 75%;  /* Makes sure it fits inside the tablet */
+    text-align: center;
+    color: black;
+}
+
+.temp{
+font-size:4.5rem;
+}
+
+.time_location{
+font-size: 2rem;
+}
+
+.condition{
+    margin:0.5rem;
+    margin-left: 0.2rem;
+    font-size: x-large;
+}nav{
+    height:50px;margin: 5rem;
+
+
+}
+.search_area{
+    padding:1rem 0;
+    outline: none;
+    border:none;color:white;background-color: transparent; 
+    font-size:1.1rem;
+    border-bottom: 2px solid white ;width:98%;
+}
+
+nav form button{
+    margin-top:1rem;
+    font-size:1.1rem;
+background-color: rgb(7, 7, 7);border-radius: 10%;color:white;
+outline:none;
+border:none;
+cursor:pointer;
+padding: 0.5rem;
+}
+
+/* 🔹 Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .tabletimg {
+        width: 90%;
+    }
+    .weather_container {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .temp {
+        font-size: 3rem;
+    }
+    .time_location {
+        font-size: 1.5rem;
+    }
+    .condition{
+        font-size:1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tabletimg {
+        width: 119%; /* Adjust tablet image size */
+    }
+
+    .weather_container {
+        width: 75%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .temp {
+        font-size: 1.8rem; /* Reduce size */
+    }
+
+    .time_location {
+        font-size: 1rem; /* Adjust for mobile */
+    }
+
+    .condition {
+        font-size: 1rem;
+    }
+
+    /* 🔹 Move navbar below the tablet */
+    nav {
+        position: relative;
+       
+    left:10%;
+    }
+
+    .search_area {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    nav form button {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+}
