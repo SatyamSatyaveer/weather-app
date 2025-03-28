@@ -16,7 +16,7 @@ form.addEventListener('submit', searchForLocation)
 let target='lucknow'
 const fetchResult= async (targetLocation)=>{
    
-    let url=`http://api.weatherapi.com/v1/current.json?key=7e6fe2219c674883be980800252803&q=${targetLocation}&aqi=no`
+    let url=`https://api.weatherapi.com/v1/current.json?key=7e6fe2219c674883be980800252803&q=${targetLocation}&aqi=no`
     const res=await fetch(url);
 
     //now convert response into json but axios does it directly
